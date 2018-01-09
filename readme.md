@@ -171,9 +171,14 @@
   assign a function into a variable and pass it around, you can pass a function into 
   another function
 
+
+
 <br/>
+
 <kbd>first class functions</kbd>
+
 ![](images/firstclass.png)
+
 <br>
 
 
