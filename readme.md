@@ -158,13 +158,23 @@
 ```
 
 
+#### first class functions
 
+- in javascript, functions are first-class objects because they can have properties
+  and methods just like any other object. What distinguishes them from other objects
+  is that functions can be called.
 
+- the fact that functions are objects and because of that we're able to pass them around
+  by reference, means that we can say that javascript has first class functions.
 
+- means that javascript  treats functions as values that you can assign, that you can
+  assign a function into a variable and pass it around, you can pass a function into 
+  another function
 
-
-
-
+<br/>
+<kbd>first class functions</kbd>
+![](images/firstclass.png)
+<br>
 
 
 
