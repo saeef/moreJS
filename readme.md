@@ -171,7 +171,8 @@
   assign a function into a variable and pass it around, you can pass a function into 
   another function
 
-
+> are first class objects because they may be stored in arrays, passed around by reference, are objects, passed as an
+> argument into another function, basically you're able to do things that you do with any other data type.
 
 <br/>
 
