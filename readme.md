@@ -27,7 +27,7 @@
 - with primitives it truly acts as a constant, but not necessarily with objects.
 
 
-#### about objects
+#### :orange_book: about objects
 
 - primitive data types are not objects (Strings,Numbers,Booleans,undefined,null,Symbols-ES6)
 - objects are collections of values - value pairs
@@ -56,7 +56,7 @@
 ```
 
 
-#### functions are objects
+#### :orange_book: functions are objects
 
 ```
     ex: functions
@@ -87,7 +87,7 @@
 ![](images/funobj.png)
 <br>
 
-#### two main methods for defining functions:
+#### :orange_book: two main methods for defining functions:
     
 * function declarations (function statements)
 * function expressions
