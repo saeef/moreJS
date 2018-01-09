@@ -3,8 +3,7 @@
 #### const
 - prevents reassignment of a variable (let)
 
-- if const is used to declare an object, it will only prevent the reassigning of an object,
-  not the changing of it.  
+- if const is used to declare an object, it will only prevent the reassigning of an object, not the changing of it.  
 
 ```
    ex.
@@ -28,7 +27,7 @@
 - with primitives it truly acts as a constant, but not necessarily with objects.
 
 
-#### functions are objects
+#### about objects
 
 - primitive data types are not objects (Strings,Numbers,Booleans,undefined,null,Symbols-ES6)
 - objects are collections of values - value pairs
@@ -57,7 +56,7 @@
 ```
 
 
-- since functions are objects, then
+#### functions are objects
 
 ```
     ex: functions
@@ -88,14 +87,15 @@
 ![](images/funobj.png)
 <br>
 
-- two main methods for defining functions:
-    * function declarations (function statements)
-    * function expressions
+#### two main methods for defining functions:
+    
+* function declarations (function statements)
+* function expressions
 
-    + Main difference:
+  + Main difference:
 
-        + function declarations are hoisted (it can be invoked before it has been defined)
-        + function expressions are not hoisted
+    + function declarations are hoisted (it can be invoked before it has been defined)
+    + function expressions are not hoisted
 
 
 
