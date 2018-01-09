@@ -1,6 +1,6 @@
 # more JS
 
-#### const
+#### :orange_book: const
 - prevents reassignment of a variable (let)
 
 - if const is used to declare an object, it will only prevent the reassigning of an object, not the changing of it.  
