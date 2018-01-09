@@ -87,7 +87,7 @@
 <br>
 
 - two main methods for defining functions:
-    * function declarations (function statments)
+    * function declarations (function statements)
     * function expressions
 
     + Main difference:
