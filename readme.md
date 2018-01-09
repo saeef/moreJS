@@ -79,7 +79,36 @@
                     (previous object)  
 
                     sum.userName
+                    or
+                    var report1 = function(val) {
+                      console.log(val);
+                    }
+                    report1.userName = "steve";
 
+                    //since is an object
+
+                    var report3 = report1; //and just like an obj have access to userName
+                    report3.userName
+                    => 'steve'
+
+                    //changing the value of userName on report1
+                    report1.userName = "thomas";
+
+                    //will also change value of property in function report3
+                    report3.userName;
+                    => "thomas"
+
+                    //if you do a dir(report1) and dir(report3), they both point to report1
+
+                    //or add a function as an obj
+
+                    report3.showUser = function() {
+                      console.log(this.userName);    //this refers to the function
+                    }
+
+                    //not a copy, pointing to the same object
+
+                    var report5 = report1;
 
 ```
 
@@ -95,10 +124,38 @@
   + Main difference:
 
     + function declarations are hoisted (it can be invoked before it has been defined)
+    
+```
+      ex:
+        function declaration
+
+        function functionName() {
+
+          //code block to execute
+        }
+
+
+```
+
+
     + function expressions are not hoisted
 
+      * the variable will be hoisted, but it will not contain the actual function.   
+        Therefore, if you try to execute it you receive an error.   
 
 
+
+```
+      ex:
+        function expression
+
+        var x = function functionName() {
+
+          //code block to execute
+        }
+
+
+```
 
 
 
