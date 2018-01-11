@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,100italic|Roboto+Mono:400,100italic,700);
+
+body {
+    margin:0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+.title {
+    font-size: 3em;
+    color: #024656;
+    text-align: center;
+    font-family: 'Roboto';
+    padding-top: 2%;
+    padding-bottom: 6%;
+}
+
+#logo {
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+#logo img {
+    width: 300px;
+    /*position: absolute;*/
+}
+
+article {
+    flex:1;
+}
+
+/*article ul {
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+article ul li {
+    padding: 5px;
+    margin-left: 300px;
+}*/
+
+/*#content {
+    position: absolute;
+    border: 2px solid gray;
+    padding: 5px;
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+    overflow-y: scroll;
+}*/
+</style>
+<title>Learn Modern JavaScript</title>
+</head>
+<body>
+    <article>
+        <h2 class="title">
+            Functions are Objects
+        </h2>
+        <div id="content">
+            
+        </div>
+    </article>
+    <footer>
+        <div id="logo"><img src="images/javascript_logo.png"></div>
+    </footer>
+<script type="text/javascript">
+
+var arr = [1,2,3,4,5];
+
+for(let i=0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+var test = function(val) {
+    console.log(this);
+    console.log("value is: " + val);
+    console.log(arguments);
+    console.log("argument is: " + arguments[0]);
+
+}
+
+
+var sumIt = function() {
+    var sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+
+    console.log(sum);
+};    
+
+
+
+</script>    
+</body>
+</html>

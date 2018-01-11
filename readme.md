@@ -1,4 +1,4 @@
-# more JS
+# first class functions
 
 #### :orange_book: const
 - prevents reassignment of a variable (let)
@@ -138,9 +138,9 @@
 ```
 
 
-    + function expressions are not hoisted
+#### :orange_book: function expressions are not hoisted
 
-      * the variable will be hoisted, but it will not contain the actual function.   
+* the variable will be hoisted, but it will not contain the actual function.   
         Therefore, if you try to execute it you receive an error.   
 
 
@@ -158,7 +158,7 @@
 ```
 
 
-#### first class functions
+#### :orange_book: first class functions
 
 - in javascript, functions are first-class objects because they can have properties
   and methods just like any other object. What distinguishes them from other objects
@@ -181,6 +181,68 @@
 ![](images/firstclass.png)
 
 <br>
+
+
+```
+    ex: passing a function as an argument into another fn
+
+    //fn1
+    var sum = function(x,y) {
+
+      console.log(x + y);
+    };
+
+    //fn2
+    var exrun = function(fn,a,b) {
+
+      console.log(fn(a,b));
+    };
+
+
+    exrun(sum,5,5);
+    =>10
+
+    //i could just pass a different fn on the fly too (an anonymous fn)
+
+    exrun(function(x,y) {return x*y},4,12);
+    =>48
+
+    or
+
+    exrun(function(x,y) {
+
+      return x * y;
+
+    },4,12);
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
