@@ -71,29 +71,18 @@ article ul li {
     </footer>
 <script type="text/javascript">
 
-var arr = [1,2,3,4,5];
 
-for(let i=0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
-
-var test = function(val) {
-    console.log(this);
-    console.log("value is: " + val);
-    console.log(arguments);
-    console.log("argument is: " + arguments[0]);
-
-}
+var Greeting = function() {
 
 
-var sumIt = function() {
-    var sum = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        sum += arguments[i];
-    }
+};
 
-    console.log(sum);
-};    
+var greet1 = new Greeting();
+
+var greet2 = new Greeting();
+
+
+
 
 
 
