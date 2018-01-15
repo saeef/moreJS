@@ -1,6 +1,12 @@
-# first class functions
+#### :link: invoking functions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :link: value of this
+#### :link: call & apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :link: bind
+#### :link: callbacks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :link: first-class functions
+#### :link: constructors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :link: prototypes
+#### :link: object oriented &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :link: functional programming
 
-#### :orange_book: const
+<br/>
+
+#### :orange_book: about `const`
 - prevents reassignment of a variable (let)
 
 - if const is used to declare an object, it will only prevent the reassigning of an object, not the changing of it.  
@@ -74,48 +80,57 @@
   |          |    * [[Call]]   // internal properties
   |__________|
 
+```
 
-                  * we can attach properties to a function because it is an object
-                    (previous object)  
+<kbd>we can attach properties to a function because it is an object  (previous object)</kbd>
 
-                    sum.userName
-                    or
-                    var report1 = function(val) {
-                      console.log(val);
-                    }
-                    report1.userName = "steve";
+```
+  sum.userName
+  or
+  var report1 = function(val) {
+    console.log(val);
+  }
+  report1.userName = "steve";
 
-                    //since is an object
+```
 
-                    var report3 = report1; //and just like an obj have access to userName
-                    report3.userName
-                    => 'steve'
 
-                    //changing the value of userName on report1
-                    report1.userName = "thomas";
+<kbd>since is an object</kbd>
 
-                    //will also change value of property in function report3
-                    report3.userName;
-                    => "thomas"
+```
+  var report3 = report1; //and just like an obj have access to userName
+  report3.userName
+  => 'steve'
 
-                    //if you do a dir(report1) and dir(report3), they both point to report1
+  //changing the value of userName on report1
+  report1.userName = "thomas";
 
-                    //or add a function as an obj
+  //will also change value of property in function report3
+  report3.userName;
+  => "thomas"
 
-                    report3.showUser = function() {
-                      console.log(this.userName);    //this refers to the function
-                    }
+//if you do a dir(report1) and dir(report3), they both point to report1
 
-                    //not a copy, pointing to the same object
+```
 
-                    var report5 = report1;
+
+<kbd>or add a function as an obj</kbd>
+
+```
+  report3.showUser = function() {
+    console.log(this.userName);    //this refers to the function
+  }
+
+  //not a copy, pointing to the same object
+
+  var report5 = report1;
 
 ```
 
 <kbd>functions are objects</kbd>
 ![](images/funobj.png)
 <br>
-
+<br>
 #### :orange_book: two main methods for defining functions:
     
 * function declarations (function statements)
@@ -165,14 +180,8 @@
   is that functions can be called.
 
 - the fact that functions are objects and because of that we're able to pass them around
-  by reference, means that we can say that javascript has first class functions.
+  by reference, that you can assign a function into a variable, or pass it into another function
 
-- means that javascript  treats functions as values that you can assign, that you can
-  assign a function into a variable and pass it around, you can pass a function into 
-  another function
-
-> are first class objects because they may be stored in arrays, passed around by reference, are objects, passed as an
-> argument into another function, basically you're able to do things that you do with any other data type.
 
 <br/>
 
@@ -180,36 +189,48 @@
 
 ![](images/firstclass.png)
 
-<br>
+<br><br/>
 
+
+<kbd>ex: passing a function as an argument into another fn</kbd>
 
 ```
-    ex: passing a function as an argument into another fn
-
     //fn1
     var sum = function(x,y) {
 
       console.log(x + y);
     };
 
+```
+
+    
+```
     //fn2
-    var exrun = function(fn,a,b) {
+    ex:
+    var run = function(fn,a,b) {
 
       console.log(fn(a,b));
     };
 
 
-    exrun(sum,5,5);
+    ex:
+    run(sum,5,5);
     =>10
 
-    //i could just pass a different fn on the fly too (an anonymous fn)
+```
 
-    exrun(function(x,y) {return x*y},4,12);
+<kbd>i could just pass a different fn on the fly too (an anonymous fn)</kbd>
+
+```
+    ex:        
+    run(function(x,y) {return x*y},4,12);
     =>48
 
     or
 
-    exrun(function(x,y) {
+    ex:
+    
+    run(function(x,y) {
 
       return x * y;
 
@@ -217,31 +238,6 @@
 
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
