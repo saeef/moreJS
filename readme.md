@@ -182,9 +182,9 @@
 <br><br/>
 
 
-```
-    ex: passing a function as an argument into another fn
+<kbd>ex: passing a function as an argument into another fn</kbd>
 
+```
     //fn1
     var sum = function(x,y) {
 
@@ -209,9 +209,9 @@
 
 ```
 
-```
-    //i could just pass a different fn on the fly too (an anonymous fn)
+<kbd>i could just pass a different fn on the fly too (an anonymous fn)</kbd>
 
+```
     exrun(function(x,y) {return x*y},4,12);
     =>48
 
@@ -227,31 +227,6 @@
 
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
