@@ -1,3 +1,10 @@
+# invoking functions
+# call & apply, bind
+# callbacks
+# constructors
+# prototypes
+# object oriented
+# functional programming
 # first class functions
 
 #### :orange_book: const
