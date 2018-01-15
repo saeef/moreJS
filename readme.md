@@ -80,9 +80,11 @@
   |          |    * [[Call]]   // internal properties
   |__________|
 
+```
 
-  * we can attach properties to a function because it is an object  (previous object)  
+<kbd>we can attach properties to a function because it is an object  (previous object)</kbd>
 
+```
   sum.userName
   or
   var report1 = function(val) {
@@ -90,8 +92,12 @@
   }
   report1.userName = "steve";
 
-  //since is an object
+```
 
+
+<kbd>since is an object</kbd>
+
+```
   var report3 = report1; //and just like an obj have access to userName
   report3.userName
   => 'steve'
@@ -103,10 +109,13 @@
   report3.userName;
   => "thomas"
 
-  //if you do a dir(report1) and dir(report3), they both point to report1
+```
 
-  //or add a function as an obj
+<kbd>if you do a dir(report1) and dir(report3), they both point to report1</kbd>
 
+<kbd>or add a function as an obj</kbd>
+
+```
   report3.showUser = function() {
     console.log(this.userName);    //this refers to the function
   }
@@ -212,7 +221,8 @@
 <kbd>i could just pass a different fn on the fly too (an anonymous fn)</kbd>
 
 ```
-    exrun(function(x,y) {return x*y},4,12);
+    ex:        
+    run(function(x,y) {return x*y},4,12);
     =>48
 
     or
