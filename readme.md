@@ -179,7 +179,7 @@
 
 ![](images/firstclass.png)
 
-<br>
+<br><br/>
 
 
 ```
