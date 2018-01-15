@@ -170,14 +170,8 @@
   is that functions can be called.
 
 - the fact that functions are objects and because of that we're able to pass them around
-  by reference, means that we can say that javascript has first class functions.
+  by reference, that you can assign a function into a variable, or pass it into another function
 
-- means that javascript  treats functions as values that you can assign, that you can
-  assign a function into a variable and pass it around, you can pass a function into 
-  another function
-
-> are first class objects because they may be stored in arrays, passed around by reference, are objects, passed as an
-> argument into another function, basically you're able to do things that you do with any other data type.
 
 <br/>
 
