@@ -190,8 +190,11 @@
 
       console.log(x + y);
     };
-    
 
+```
+
+    
+```
     //fn2
     ex:
     var run = function(fn,a,b) {
@@ -204,6 +207,9 @@
     run(sum,5,5);
     =>10
 
+```
+
+```
     //i could just pass a different fn on the fly too (an anonymous fn)
 
     exrun(function(x,y) {return x*y},4,12);
