@@ -6,7 +6,7 @@
 
 <br/>
 
-#### :orange_book: about const
+#### :orange_book: about `const`
 - prevents reassignment of a variable (let)
 
 - if const is used to declare an object, it will only prevent the reassigning of an object, not the changing of it.  
