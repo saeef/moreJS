@@ -120,7 +120,7 @@
 <kbd>functions are objects</kbd>
 ![](images/funobj.png)
 <br>
-
+<br>
 #### :orange_book: two main methods for defining functions:
     
 * function declarations (function statements)
