@@ -1,12 +1,9 @@
-#### invoking functions
-#### value of this
-#### call & apply, bind
-#### callbacks
-#### constructors
-#### prototypes
-#### object oriented
-#### functional programming
-#### first class functions
+#### invoking functions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value of this
+#### call & apply&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bind
+#### callbacks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first-class functions
+#### constructors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prototypes
+#### object oriented&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;functional programming
+
 
 #### :orange_book: const
 - prevents reassignment of a variable (let)
