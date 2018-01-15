@@ -109,9 +109,10 @@
   report3.userName;
   => "thomas"
 
+if you do a dir(report1) and dir(report3), they both point to report1
+
 ```
 
-<kbd>if you do a dir(report1) and dir(report3), they both point to report1</kbd>
 
 <kbd>or add a function as an obj</kbd>
 
