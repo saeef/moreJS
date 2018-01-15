@@ -4,7 +4,7 @@
 #### constructors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prototypes
 #### object oriented&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;functional programming
 
-
+<br/>
 #### :orange_book: const
 - prevents reassignment of a variable (let)
 
