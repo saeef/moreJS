@@ -1,8 +1,8 @@
-#### invoking functions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value of this
-#### call & apply&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bind
-#### callbacks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first-class functions
-#### constructors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prototypes
-#### object oriented&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;functional programming
+#### :link: invoking functions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :link: value of this
+#### :link: call & apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :link: bind
+#### :link: callbacks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :link: first-class functions
+#### :link:constructors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:link: prototypes
+#### object oriented :link: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:link: functional programming
 
 <br/>
 
