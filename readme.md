@@ -109,7 +109,7 @@
   report3.userName;
   => "thomas"
 
-if you do a dir(report1) and dir(report3), they both point to report1
+//if you do a dir(report1) and dir(report3), they both point to report1
 
 ```
 
