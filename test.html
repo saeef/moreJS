@@ -71,17 +71,42 @@ article ul li {
     </footer>
 <script type="text/javascript">
 
+debugger;
+var first = 'James';
+var last = 'Hetfield';
 
-var Greeting = function() {
+var user1 = {
+    first: 'Michael',
+    last: 'Schummer'
+};
 
+var user2 = {
+    first: 'Sandra',
+    last: 'Marchesse'
+};
+
+// var fullname = function() {
+//     var that = this;
+//     setTimeout(function() {
+
+//         console.log(that.first + ' ' + that.last);
+
+//     },1000);
+
+// };
+
+var fullname = function() {
+    
+    setTimeout(function() {
+
+        console.log(this.first + ' ' + this.last);
+
+    }.bind(this),1000);
 
 };
 
-var greet1 = new Greeting();
-
-var greet2 = new Greeting();
-
-
+fullname.call(user1);
+//fullname.call(user2);
 
 
 
