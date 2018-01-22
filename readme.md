@@ -6,6 +6,9 @@
 
 <br/>
 
+<kbd>design-patterns js</kbd>
+<br/>
+![](images/designpatterns.jpg)
 
 
 

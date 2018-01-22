@@ -10,6 +10,29 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Roboto', arial, sans-serif;
+    font-size: 16px;
+}
+
+#content {
+    width: 60%;
+    margin:0 auto;
+}
+
+ol {margin:2em 0;}
+
+li {
+    padding:2em 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
 }
 
 .title {
@@ -18,7 +41,7 @@ body {
     text-align: center;
     font-family: 'Roboto';
     padding-top: 2%;
-    padding-bottom: 6%;
+    padding-bottom: 1em;
 }
 
 #logo {
@@ -63,7 +86,27 @@ article ul li {
             Functions are Objects
         </h2>
         <div id="content">
-            
+            <ol>
+                <li class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+
+            </ol>
         </div>
     </article>
     <footer>
@@ -71,45 +114,87 @@ article ul li {
     </footer>
 <script type="text/javascript">
 
-debugger;
-var first = 'James';
-var last = 'Hetfield';
+// (function() {
 
-var user1 = {
-    first: 'Michael',
-    last: 'Schummer'
-};
-
-var user2 = {
-    first: 'Sandra',
-    last: 'Marchesse'
-};
-
-// var fullname = function() {
-//     var that = this;
-//     setTimeout(function() {
-
-//         console.log(that.first + ' ' + that.last);
-
-//     },1000);
-
-// };
-
-var fullname = function() {
+//     var counter = 0,
+//             doc = this.document,
+//             pars = doc.querySelectorAll('.hide');
     
-    setTimeout(function() {
+//     console.log(counter,'\n', doc, '\n', pars);
 
-        console.log(this.first + ' ' + this.last);
+//     window.addEventListener('keydown', function(e) {
+//         console.log(e);
+//         switch(e.keyCode) {
+//             case 40:
+//                 if(counter < pars.length) {
 
-    }.bind(this),1000);
+//                     pars[counter].className = 'show';
+//                     counter++;
+//                 }
 
-};
+//                 break;
+//         }
 
-fullname.call(user1);
-//fullname.call(user2);
+//     },false);
 
 
 
+
+
+// })();
+
+var APPsl =  APPsl || {};
+
+(function(global) {
+
+    var prompt = "welcome",
+        prompt2 = "how are u?",
+        prompt3 = "good to see u again",
+        counter = 0,
+        users = [];
+
+
+    global.greeting = function(user) {
+
+        var greeting = prompt + " ";
+
+        if(newUser(user)) {
+            greeting += prompt2;
+        
+        } else {
+            greeting += prompt3;
+        
+        }
+        console.log(greeting);
+        counter++;
+        global.numberOfGreetings();
+
+    };
+
+    var newUser = function(user) {
+
+        for(let i = 0; i < users.length; i++) {
+            if(users[i].toUpperCase() === user.toUpperCase()) {
+                return false;
+            }
+        }
+        global.addUser(user);
+        return true;
+
+    };
+
+
+    global.addUser = function(user) {
+        users.push(user)
+    };
+
+    global.numberOfGreetings = function() {
+
+        console.log("Total number of greetings: " + counter);
+    };
+
+
+})(APPsl);
 
 </script>    
 </body>
