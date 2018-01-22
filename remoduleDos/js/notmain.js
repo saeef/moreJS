@@ -16,14 +16,15 @@ var MAINAPP = (function(app) {
         //callback
         xhr.onreadystatechange = function() {
             if(xhr.readyState == 4 && xhr.status == 200) {
-               jsonObj = JSON.parse(xhr.responseText);
+               sub.jsonObj = JSON.parse(xhr.responseText);
                console.log(jsonObj);
-               return jsonObj;
+               //access json dot notation now
+               console.log(MAINAPP.nomain.jsonObj[0].color);
                
             }
 
         };
-        xhr.send();
+        xhr.send(null);
         
     };
     
