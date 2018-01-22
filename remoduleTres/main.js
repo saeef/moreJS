@@ -12,15 +12,17 @@ var EnterData = (function(nsp) {
     //output list-items
     islist = function() {
         //debugger;
+        var rlist = '';
         var b = 1;
         var c = 1;
         var obj = jsonObj.listItems;
         for(var prop in obj) {
-            document.getElementById("b"+ b).
+            rlist += document.getElementById("b"+ b).
             innerHTML = obj[prop]['x'+c];
             b++;c++;
         }
-
+        return rlist;   //just cause im making this fun public so i need it 
+                        //to return something
     },
 
     //load data.json
@@ -45,18 +47,14 @@ var EnterData = (function(nsp) {
 
 
     //public fns and methods
-    nsp.jsonObj = jsonObj;
-    nsp.loadData = loadData;
+    nsp.isheading = isheading;
+    nsp.islist = islist;
 
 
     
     return nsp;
 
-        
-
-
-
-
+    
 
 
 })(EnterData || {});
