@@ -8,7 +8,7 @@
 
 <kbd>design-patterns js</kbd>
 <br/>
-![](mds/images/jsdp.jpg)
+![](mds/images/jsdp.png)
 
 
 
