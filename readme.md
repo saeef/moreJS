@@ -11,8 +11,9 @@
 ![](mds/images/jsdp2.png)
 
 <br/>
-- A `design pattern` is a tried and tested solution to a common programming   
-  problem. ___It is a best practice.___
+
+
+- A `design pattern` is a tried and tested solution to a common programming problem. ___It is a best practice.___
 - `patterns` makes it ___easier___ for someone else to read and understand your    
   code, and it ___enables___ you to read and and understand someone else's code   
   that follows a pattern, that you're familiar with.
