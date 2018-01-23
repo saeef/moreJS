@@ -22,8 +22,7 @@
 &nbsp; &nbsp; &nbsp; &nbsp; ___it may be a part of an approach___ you have chosen to use, or may simply recognize    
 &nbsp; &nbsp; &nbsp; &nbsp; that a ___problem can be solved by using a particular pattern___.           
 
-&nbsp; &nbsp; &nbsp; &nbsp;<kbd>+</kbd>    Ex:  
-    namespace pattern, module pattern, IIFEs, and even callbacks `could be 
+&nbsp; &nbsp; &nbsp; &nbsp;<kbd>+</kbd> Ex: namespace pattern, module pattern, IIFEs, and even callbacks `could be 
     considered as a pattern`. 
 
    > &nbsp; &nbsp; &nbsp; &nbsp; These are techniques in javascript but ***they're also a pattern***.  ___A best practice to solve certain problem___. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :hammer:  :pizza: :beer:
