@@ -17,9 +17,9 @@
 
 <kbd>-</kbd> `Patterns` makes it ___easier___ for someone else to read and understand your code, and it ___enables___ you to read &nbsp;and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; understand someone else's code that follows a pattern, that you're familiar with.    
 
-<kbd>-</kbd> While a design pattern ___provides a possible solution___ to problems you encounter in programming, ___it may be              a part of 
-  an approach___ you have chosen to use or may simply recognize that a ___problem can be solved by using a         
-  particular pattern___.       
+<kbd>-</kbd> While a design pattern ___provides a possible solution___ to problems you encounter in programming,    
+&nbsp; &nbsp; &nbsp; &nbsp; ___it may be a part of an approach___ you have chosen to use, or may simply recognize    
+&nbsp; &nbsp; &nbsp; &nbsp; that a ___problem can be solved by using a particular pattern___.           
 
 +   Ex: 
     namespace pattern, module pattern, IIFEs, and even callbacks `could be 
