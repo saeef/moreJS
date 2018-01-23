@@ -22,7 +22,7 @@
 &nbsp; &nbsp; &nbsp; &nbsp; ___it may be a part of an approach___ you have chosen to use, or may simply recognize    
 &nbsp; &nbsp; &nbsp; &nbsp; that a ___problem can be solved by using a particular pattern___.           
 
-&nbsp; &nbsp; &nbsp; &nbsp;<kbd>+</kbd>   Ex: 
+&nbsp; &nbsp; &nbsp; &nbsp;<kbd>+</kbd>   Ex: &nbs;
     namespace pattern, module pattern, IIFEs, and even callbacks `could be 
     considered as a pattern`. 
 
