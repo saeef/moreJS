@@ -13,14 +13,13 @@
 <br/>
 
 
-- A `design pattern` is a tried and tested solution to a common programming problem. ___It is a best practice.___
-- `patterns` makes it ___easier___ for someone else to read and understand your    
-  code, and it ___enables___ you to read and and understand someone else's code   
-  that follows a pattern, that you're familiar with.
+- A `design pattern` is a tried and tested solution to a common programming problem.  ___It is a best practice.___
 
-- While a design pattern `provides a possible solution` to problems you encounter   
-  in programming, `it may be a part of an approach` you have chosen to use or   
-  may simply recognize that a `problem can be solved by using a particular pattern`.  
+- `patterns` makes it ___easier___ for someone else to read and understand your code, and it ___enables___ you to read   
+  and and understand someone else's code that follows a pattern, that you're familiar with.    
+
+- While a design pattern `provides a possible solution` to problems you encounter in programming, `it may be a part of an   
+  approach` you have chosen to use or may simply recognize that a `problem can be solved by using a particular pattern`.     
 
 +   Ex: 
     namespace pattern, module pattern, IIFEs, and even callbacks `could be 
