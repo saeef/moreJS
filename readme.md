@@ -26,7 +26,7 @@
     namespace pattern, module pattern, IIFEs, and even callbacks `could be 
     considered as a pattern`. 
 
-    > These are techniques in javascript but ***they're also a pattern***.  ___A best practice to solve certain problem___.
+    > These are techniques in javascript but ***they're also a pattern***.  ___A best practice to solve certain problem___. &nbsp; :hammer:
 
 
 
