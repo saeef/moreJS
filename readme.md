@@ -15,7 +15,7 @@
 
 <kbd>-</kbd> A `design pattern` is a tried and tested solution to a common programming problem.  ___It is a best practice.___
 
-<kbd>-</kbd> `Patterns` makes it ___easier___ for someone else to read and understand your code, and it ___enables___ you to read &nbsp;and understand someone else's code that follows a pattern, that you're familiar with.    
+<kbd>-</kbd> `Patterns` makes it ___easier___ for someone else to read and understand your code, and it ___enables___ you to read &nbsp;and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; understand someone else's code that follows a pattern, that you're familiar with.    
 
 <kbd>-</kbd> While a design pattern ___provides a possible solution___ to problems you encounter in programming, ___it may be              a part of 
   an approach___ you have chosen to use or may simply recognize that a ___problem can be solved by using a         
