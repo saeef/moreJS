@@ -27,7 +27,7 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
         for (let i = 0; i < questionsArray.length; i++) {
             questionsArray[i] = new Question(questionsArray[i]);
         }
-        console.log(questionsArray);
+        //console.log(questionsArray);
         setUpNavigation();
     },
 
@@ -101,10 +101,30 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
                         if (this.distractorText[i] !== undefined) {
                             distractors[i].innerHTML = this.distractorText[i];
                             domU.removeClass([distractors[i]],'remove');
+                            //debugger;
+                            
                         }
-                    }
+    
+                        //true n false
+                        if(this.id == 'q03' && this.distractorText[i] == "false") {
+                            debugger;
+                            this.htmlDiv.children[0].children[4].classList.add('gobelow');
+                        }
+                        
+                        if(this.id == 'q02' && this.distractorText[i] !== "false") {
+                            this.htmlDiv.children[0].children[4].className = '';
+                        }
+
+                    }    
+
+
+
                     for (let i = 0; i < distractorsRadio.length; i++) {
-                        distractorsRadio[i].checked = false;
+                        
+                            distractorsRadio[i].checked = false;
+                        
+                        
+
                     }
                 };
                 this.checkTheAnswer = function() {
@@ -174,8 +194,12 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
                 newQuestion.hideFeedback();
                 newQuestion.populateTheQuestion();
                 newQuestion.displayQuestion();
+                console.log(newQuestion);
+                console.log(newQuestion.id);
+                console.log(newQuestion.distractorText.length);
             },
             get currentQuestion() {
+                //console.log(cQuestion);
                 return cQuestion;
             },
             set currentQuestion(value) {
@@ -190,7 +214,7 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
                 this.currentQuestion = this.currentQuestion + 1;
                 this.showQuestion();
             }
-            console.log(this.currentQuestion)
+            //console.log(this.currentQuestion)
         };
         prevBtn = Object.create(navigationProto);
         prevBtn.goPrev = function(e) {

@@ -29,7 +29,7 @@ var UTIL = (function(p) {
     },
 
     updatePage = function(res) {
-        console.log(res);
+        //console.log(res);
         var headerH1 = document.querySelector('.mainContent header h1').
                        innerText = res[0].header[0].h1,
             headerH2 = document.querySelector('.mainContent header h3').

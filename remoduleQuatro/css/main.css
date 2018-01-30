@@ -223,7 +223,7 @@ button.fill-in-submit {
 }
 
 .remove {
-    display: none;
+    display: none !important;
 }
 
 [type="radio"]:not(:checked), 
@@ -314,6 +314,10 @@ label{
     font-family: 'Roboto';
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.gobelow {
+    display: block !important;
 }
 
 [type="radio"]:not(:checked) + label::after {
