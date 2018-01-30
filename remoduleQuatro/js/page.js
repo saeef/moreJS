@@ -43,18 +43,18 @@ var UTIL = (function(p) {
                        children[1].innerText = res[1].allqtns[1].h42,
 
             //navigation
-            navigationH3 = document.querySelector('.qNav h3').
-                       innerText = res[2].nav[0].h3;
+            // navigationH3 = document.querySelector('.qNav h3').
+            //            innerText = res[2].nav[0].h3;
 
             //footer
             footel1 = document.querySelectorAll('.footertop ul')[0].children[0].
-                       innerText = res[3].footer[0].li1,
+                       innerHTML = res[3].footer[0].li1,
             footel2 = document.querySelectorAll('.footertop ul')[0].children[1].
-                       innerText = res[3].footer[1].li2,
+                       innerHTML = res[3].footer[1].li2,
             footel3 = document.querySelectorAll('.footertop ul')[0].children[2].
-                       innerText =  res[3].footer[2].li3,
-            footcopy = document.querySelector('.footerbottom p').
-                       innerText =  res[3].footer[3].copy;
+                       innerHTML =  res[3].footer[2].li3,
+            footcopy = document.querySelector('.copyreg').
+                       innerHTML =  res[3].footer[3].copyreg;
 
     
     };

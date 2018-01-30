@@ -1,10 +1,5 @@
-
-
 var MAINAPP = (function(nsp, $, domU, strU,pageU) {
 
-    /*
-    Quiz Functionality
-    */
     var contentObj = {},
         questionsArray = [],
         navigationProto = {}, //Setup in setUpNavigation()
@@ -236,12 +231,10 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
         }
     };
 
+
+
     pageU.loadHeader();
-
-
-    /*
-    Setup
-    */
+   
     UTIL.domReady(function() {
         initQuiz();
     });

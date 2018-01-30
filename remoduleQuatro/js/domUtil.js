@@ -4,9 +4,7 @@ var UTIL = (function(u) {
 
     //Dependencies
     var strU = u.string;
-    /*
-    DOM Functionality
-    */
+   
     var doc = document,
         $ = function(domElement) {
             if (!singleSelector(domElement)) {

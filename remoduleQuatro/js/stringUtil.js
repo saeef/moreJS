@@ -2,9 +2,7 @@ var UTIL = (function(s) {
     //Set up sub Module
     var sub = s.string = s.string || {};
 
-    /*
-    String Functionality
-    */
+    
       var numChar = function(str, char) {
                 //return (str.match(new RegExp(char, 'g')) || []).length;
                 return (str.split(char).length - 1);
