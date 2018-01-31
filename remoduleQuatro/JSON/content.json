@@ -1,0 +1,102 @@
+{
+    "buttonText": "Submit",
+    
+    "questions": [
+        {
+            "id": "q01",
+            "type": "fill-in",
+            "questionText": "Enter the primitive data types available in JavaScript.",
+            "distractors": [],
+            "correctResp": "string,number,boolean,null, undefined, symbol", 
+            "feedback": {
+                "noAnswer": "Please provide an answer first.",
+                "correctAnswer": "Well done! That is the correct response.",
+                "wrongAnswer": "Not quite. There are 6 total primitive types. A new one was added in ES6: symbol"
+            },
+            "weight": 1
+        },
+        {
+            "id": "q02",
+            "type": "multi-choice",
+            "questionText": "Which keyword is used to declare block-scoped variables?",
+            "distractors": ["var", "const", "let", "no declaration keyword"],
+            "correctResp": "let",
+            "feedback": {
+                "noAnswer": "Please provide an answer first.",
+                "correctAnswer": "Well done! That is the correct response.",
+                "wrongAnswer": "Sorry, that is inccorrect. Let, unlike var, allows you to declare block-scoped variables."
+            },
+            "weight": 1
+        },
+        {
+            "id": "q03",
+            "type": "true-false",
+            "questionText": "Everything in JavaScript with the exception of primitive values are objects.",
+            "distractors": ["true", "false"],
+            "correctResp": "true",
+            "feedback": {
+                "noAnswer": "Please provide an answer first.",
+                "correctAnswer": "Well done! That is the correct response.",
+                "wrongAnswer": "The correct answer is true. Everything including functions are objects in JavaScript."
+            },
+            "weight": 1
+        },
+        {
+            "id": "q04",
+            "type": "fill-in",
+            "questionText": "What command is used to convert an object to a JSON string?",
+            "distractors": [],
+            "correctResp": "JSON.stringify", 
+            "feedback": {
+                "noAnswer": "Please provide an answer first.",
+                "correctAnswer": "Well done! That is the correct response.",
+                "wrongAnswer": "The answer is JSON.stringify(). Stringify is a JSON object method used to convert a JavaScript object into a string."
+            },
+            "weight": 1
+        }
+    ],
+
+    "html": [
+
+        {"header": [
+
+                {"h1": "Do you think you know this JS"},
+
+                {"h3": "Four questions, 25 points per questions, and you may call a friend if you wish to."},
+
+                {"h4": "At anytime, feel free to check up your score, request some feedback or google it - just dont' skip the question. "}
+            
+            ]
+        },
+
+        {"allqtns": [
+
+                {"h41": "Total Questions"},
+
+                {"h42": "Questions Completed"}
+            
+            ]
+        },
+
+        {"nav": [
+
+                {"h3": "When you're ready move to the next question"}
+            
+            ]
+        },
+
+        {"footer": [
+
+                {"li1": "<a href='#'>need feedback?</a>"},
+
+                {"li2": "<a href='#'>get your score</a>"},
+
+                {"li3": "<a href='#'>skip this question</a>"},
+
+                {"copyreg": "<a href='#'>stefano ®</a>"}
+            
+            ]
+        }
+
+    ]
+}
