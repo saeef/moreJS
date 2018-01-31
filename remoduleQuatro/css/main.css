@@ -149,10 +149,12 @@ button.fill-in-submit {
     cursor: pointer;
     -webkit-appearance: button;
     font-weight: 200;
-    background: linear-gradient(to bottom right, #00695C, #00796B 50%);
+    background: linear-gradient(to bottom right, #FF9800, #FF9800 50%);
     color: #fff;
     line-height: 0;
-    border: 1px solid #335233;
+    border: 1px solid #f68325;
+    outline: none;
+
     text-transform: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -166,12 +168,11 @@ button.fill-in-submit {
 }
 
 .feedback {
-    margin-top: 2em;
     opacity: 0;
     display: inline-block;
     position: absolute;
-    right: 0;
-    top:75%;
+    right: 15%;
+    top:43%;
     font-size: 1.2em;
     font-family: 'Roboto',arial, sans-serif;
     -webkit-transition: opacity 1s ease-in-out;
@@ -182,11 +183,16 @@ button.fill-in-submit {
 }
 
 .feedback.no-answer {
-    color: #035767;
+    color: #2c7bd2;
 }
 
 .feedback.no-answer span {
     font-size: 3em;
+    color:#2c7bd2;
+}
+
+.feedback.no-answer p {
+    color:#333;
 }
 
 .feedback.correct span {
@@ -195,10 +201,23 @@ button.fill-in-submit {
     font-size: 3em;
 }
 
+.feedback.incorrect {
+    padding-top:4.5em;
+}
+
+.feedback.incorrect p {
+    margin-left: 3em;
+    display: inline-flex;
+    line-height: 1.5;
+}
+
 .feedback.incorrect span {
-    padding-left: 20px;
+    margin-left: -.98em;
     color: red;
     font-size: 3em;
+    display: inline-block;
+    margin-top: -15px;
+    margin-right: 20px;
 }
 
 .feedback p {
@@ -257,9 +276,10 @@ input[type=radio] {
     display: inline-block;
     width: 35%;
     margin:0 .5em .5em 0;
-    background: #9E9D29;
+    background: #ffcd82;
     font-weight: 200;
     font-size: 1.10em;
+    border: 1px solid #f5bc52;
     border-radius: 4px;
     
 }
@@ -318,6 +338,18 @@ label{
 
 .gobelow {
     display: block !important;
+}
+
+#qtnNumber {
+    display: inline-block;
+    width: 150px;
+    margin: 0 auto;
+    vertical-align: middle;
+    line-height: 62px;
+    font-family: 'Roboto', arial, sans-serif;
+    font-size: 1.25em;
+    border: 1px solid #0f2519;
+    box-shadow: 0px 0px 0px 1px black;
 }
 
 [type="radio"]:not(:checked) + label::after {

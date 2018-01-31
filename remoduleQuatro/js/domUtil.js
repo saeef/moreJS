@@ -5,26 +5,26 @@ var UTIL = (function(u) {
     //Dependencies
     var strU = u.string;
    
-    var doc = document,
+    var doc = document, //short
         $ = function(domElement) {
             if (!singleSelector(domElement)) {
                 try {
                     return doc.querySelectorAll(domElement);
-                } catch(e) {
-                    console.log(e);
+                } catch(err) {
+                    console.log(err.message);
                 }
             } else {
                 if (domElement.indexOf('#') === 0) {
                     try {
                         return [(doc.getElementById(domElement.substring(1,domElement.length)))];
-                    } catch(e) {
-                        console.log(e);
+                    } catch(err) {
+                        console.log(err.message);
                     }
                 } else if (domElement.indexOf('.') === 0){
                     try {
                         return doc.getElementsByClassName(domElement.substring(1,domElement.length));
-                    } catch(e) {
-                        console.log(e);
+                    } catch(err) {
+                        console.log(err.message);
                     }
                 } else {
                     try {

@@ -27,6 +27,7 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
         for (let i = 0; i < questionsArray.length; i++) {
             questionsArray[i] = new Question(questionsArray[i]);
         }
+
         //console.log(questionsArray);
         setUpNavigation();
     },
@@ -45,7 +46,7 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
         });*/
     };
 
-    //Setup Questions
+    //Setup Questions constructor
     var Question = function(obj) {
         var htmlDiv;
         //Transfer Data
@@ -69,31 +70,38 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
         this.inccorrectFeed = htmlDiv.querySelector(".feedback.incorrect");
         this.htmlDiv = htmlDiv;
 
-        switch (this.questionDiv) {
-            case "fill-in":
-                this.populateTheQuestion = function() {
-                    this.populateQuestion();
-                    htmlDiv.querySelector('textarea').value = "";
-                };
-                this.checkTheAnswer = function() {
-                    console.log("fill-in");
-                    var ans,
-                        value = htmlDiv.querySelector('textarea').value;
 
-                    if (value !== "") {
-                        ans = strU.breakOut(this.correctResp, ",");
-                        this.correct = ans.every(function(val) {
-                            return (value.indexOf(val) > -1);
-                        });
-                        this.result = (this.correct) ? 'correct' : 'incorrect';
-                    }
-                    this.hideFeedback();
-                    this.displayFeedback();
-                };
-                break;
-            case "multi-choice":
-                var distractors = htmlDiv.querySelectorAll('label'),
-                    distractorsRadio = htmlDiv.querySelectorAll('input');
+        if (this.questionDiv == 'fill-in') {
+            
+            this.populateTheQuestion = function() {
+                this.populateQuestion();
+                htmlDiv.querySelector('textarea').value = "";
+            };
+
+            this.checkTheAnswer = function() {
+                console.log("fill-in");
+                var ans,
+                    value = htmlDiv.querySelector('textarea').value;
+
+                if (value !== "") {
+                    ans = strU.breakOut(this.correctResp, ",");
+                    this.correct = ans.every(function(val) {
+                        return (value.indexOf(val) > -1);
+                    });
+                    this.result = (this.correct) ? 'correct' : 'incorrect';
+                }
+                this.hideFeedback();
+                this.displayFeedback();
+            };
+            
+        
+        }//if
+
+        else if (this.questionDiv == 'multi-choice') {
+
+            var distractors = htmlDiv.querySelectorAll('label'),
+                distractorsRadio = htmlDiv.querySelectorAll('input');
+
                 this.populateTheQuestion = function() {
                     this.populateQuestion();
                     domU.addClass(distractors, 'remove');
@@ -101,13 +109,12 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
                         if (this.distractorText[i] !== undefined) {
                             distractors[i].innerHTML = this.distractorText[i];
                             domU.removeClass([distractors[i]],'remove');
-                            //debugger;
-                            
+                                    
                         }
     
                         //true n false
                         if(this.id == 'q03' && this.distractorText[i] == "false") {
-                            debugger;
+                            //debugger;
                             this.htmlDiv.children[0].children[4].classList.add('gobelow');
                         }
                         
@@ -115,18 +122,15 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
                             this.htmlDiv.children[0].children[4].className = '';
                         }
 
-                    }    
-
+                    }//forloop    
 
 
                     for (let i = 0; i < distractorsRadio.length; i++) {
-                        
                             distractorsRadio[i].checked = false;
-                        
-                        
-
                     }
-                };
+                
+                };//populateTheQuestion
+
                 this.checkTheAnswer = function() {
                     console.log("multi-choice");
 
@@ -141,15 +145,25 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
                     }
                     this.hideFeedback();
                     this.displayFeedback();
-                };
-                break;
-            default:
-                this.populateTheQuestion = function() {
-                    this.populateQuestion();
-                };
-                break;
-        }
-    };
+                
+                };//checkTheAnswer
+               
+        }//elseif
+
+        else {
+
+            this.populateTheQuestion = function() {
+                this.populateQuestion();
+            };
+                
+        }//else
+                
+
+
+    };//Question const
+
+
+    //displayQuestion
     Question.prototype.displayQuestion = function() {
         var checkTheAnswer = this.checkTheAnswer.bind(this);
         domU.removeClass([this.htmlDiv],'hidden-question');
@@ -157,9 +171,13 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
             checkTheAnswer();
         });
     };
+
+    //hideQuestion
     Question.prototype.hideQuestion = function() {
         domU.addClass([this.htmlDiv], 'hidden-question');
     };
+
+    //populateQuestion
     Question.prototype.populateQuestion = function() {
         //Set Question text
         this.questionField.innerHTML = this.questionText;
@@ -167,46 +185,82 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
         this.correctFeed.innerHTML = '<p><span>&#10003 </span>' + this.feedback.correctAnswer + '</p>';
         this.inccorrectFeed.innerHTML = '<p><span>X </span>' + this.feedback.wrongAnswer + '</p>';
     };
+
+    //hideFeedback
     Question.prototype.hideFeedback = function() {
         var feedback = this.htmlDiv.querySelectorAll('.feedback.visible');
         domU.removeClass(feedback, 'visible');
     };
+
+    //displayFeedback
     Question.prototype.displayFeedback = function() {
         var feedback = $('.feedback.' + this.result);
         domU.addClass(feedback, 'visible');
     };
+
+    //checkAnswer
     Question.prototype.checkAnswer = function() {
 
     };
 
+    //enterPageNumber
+    Question.prototype.enterPageNumber = function() {
+        var pn = this.id,
+            pn = pn.replace(/q0/g,'');
+            document.getElementById('qtnNumber').
+            innerText = 'Question  ' + pn;
+            //bgcolor
+            document.getElementById('qtnNumber').
+            style.backgroundColor = strU.getRandomBgColor();
+            
+           
+    };
+
+
     //Setup Navigation Object
     var setUpNavigation = function() {
+        
         var cQuestion = 0;
+        //navigation objPrototype
         navigationProto = {
+            
             questionsArray: questionsArray,
             totalQuestions: questionsArray.length,
+            
             hideQuestion: function() {
                 var curQuestion = this.questionsArray[this.currentQuestion];
                 curQuestion.hideQuestion();
             },
+
             showQuestion: function() {
                 var newQuestion = this.questionsArray[this.currentQuestion];
+                //hide feedback
                 newQuestion.hideFeedback();
+                //populate data
                 newQuestion.populateTheQuestion();
+                //show question
                 newQuestion.displayQuestion();
-                console.log(newQuestion);
-                console.log(newQuestion.id);
-                console.log(newQuestion.distractorText.length);
+                //enter page number
+                newQuestion.enterPageNumber();
+                // console.log(newQuestion.id);
+                // console.log(newQuestion.distractorText.length);
             },
+
+            //getter
             get currentQuestion() {
                 //console.log(cQuestion);
                 return cQuestion;
             },
+
+            //setter
             set currentQuestion(value) {
                 cQuestion = value;
             }
-        };
+        
+        };//navigationProto obj
 
+
+        //next button
         nextBtn = Object.create(navigationProto);
         nextBtn.goNext = function(e) {
             if (this.currentQuestion < this.totalQuestions - 1){
@@ -216,9 +270,11 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
             }
             //console.log(this.currentQuestion)
         };
+
+        //previous button
         prevBtn = Object.create(navigationProto);
         prevBtn.goPrev = function(e) {
-            console.log(this.currentQuestion);
+            //console.log(this.currentQuestion);
             if (this.currentQuestion > 0){
                 this.hideQuestion();
                 this.currentQuestion = this.currentQuestion - 1;
@@ -226,14 +282,19 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
             }
         };
 
+        //prev event list
         $('.btn-prev')[0].addEventListener("click", function(e) {
             prevBtn.goPrev(e);
         });
+
+        //next event list
         $('.btn-next')[0].addEventListener("click", function(e) {
             nextBtn.goNext(e);
         });
 
+        //call showQuestion
         navigationProto.showQuestion();
+        //public
         nsp.prevBtn = prevBtn;
         nsp.nextBtn = nextBtn;
     };
@@ -257,9 +318,11 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
 
 
 
-    pageU.loadHeader();
+    
    
     UTIL.domReady(function() {
+        
+        pageU.loadHeader();
         initQuiz();
     });
 
