@@ -321,8 +321,13 @@ var MAINAPP = (function(nsp, $, domU, strU,pageU) {
     
    
     UTIL.domReady(function() {
+        pageU.loadJsonData('../partials/mainContent.html', pageU.updatereshtml,'main');
+        pageU.loadJsonData('../partials/footer.html', pageU.updatereshtml,'footer');
+        //let page load first
+        setTimeout(function() {
+            pageU.loadJsonData('../JSON/content.json',pageU.updateJsonPage);
+        },100);
         
-        pageU.loadHeader();
         initQuiz();
     });
 

@@ -8,28 +8,43 @@ var UTIL = (function(p) {
 
     //sub module
     var sub = p.page = p.page || {};
-    //response data
-    var response;
-
+    
+    var path = 'JSON/content.json',
+        callback = updateJsonPage;
+    
     //load json file
-    var loadHeader = function() {
+    var loadJsonData = function(path,callback,id) {
+        id = id || undefined;
+        var response,
+            callback;
         xhr = new XMLHttpRequest();
         xhr.overrideMimeType('application/json');
         xhr.onreadystatechange = function() {
+            //debugger;
             if((this.readyState == 4) && (this.status == 200)) {
-                response = JSON.parse(this.responseText);
-                response = response.html;  
-                updatePage(response);
+                console.log(typeof this.responseText);
+                if(path.substring(path.length - 4) === 'html') {
+                    response = this.responseText;
+                    callback(response,id);
+                }else if(path.substring(path.length - 4) === 'json') {
+                    response = JSON.parse(this.responseText);
+                    response = response.html;  
+                    callback(response,id);
+                }
+                
             }
         };
 
-        xhr.open('GET','JSON/content.json', true);
+        xhr.open('GET',path, true);
         xhr.send();
 
     },
 
-    updatePage = function(res) {
+    updateJsonPage = function(res,id) {
         //console.log(res);
+        id = id || undefined;
+        //debugger;
+        
         var headerH1 = document.querySelector('.mainContent header h1').
                        innerText = res[0].header[0].h1,
             headerH2 = document.querySelector('.mainContent header h3').
@@ -42,10 +57,6 @@ var UTIL = (function(p) {
             questionsCompleted = document.querySelectorAll('.allquestions')[0].
                        children[1].innerText = res[1].allqtns[1].h42,
 
-            //navigation
-            // navigationH3 = document.querySelector('.qNav h3').
-            //            innerText = res[2].nav[0].h3;
-
             //footer
             footel1 = document.querySelectorAll('.footertop ul')[0].children[0].
                        innerHTML = res[3].footer[0].li1,
@@ -57,16 +68,28 @@ var UTIL = (function(p) {
                        innerHTML =  res[3].footer[3].copyreg;
 
     
+    },
+
+    updatereshtml = function(res,id) {
+        document.getElementById(id).innerHTML = res;
     };
 
-    //calling it from main.js just to have all my calls in one place
-    //loadHeader();
+
+
+
+
+
+    
     
 
 
 
-    //public
-    sub.loadHeader = loadHeader;
+    //public jsondata
+    sub.loadJsonData = loadJsonData;
+    //html update
+    sub.updatereshtml = updatereshtml;
+    //update innerpage data
+    sub.updateJsonPage = updateJsonPage;
     
 
 
