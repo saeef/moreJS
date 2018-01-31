@@ -65,10 +65,11 @@
 - images/css - kepping it simple so no css framework - just the basics.
 
 
-
-
-
-
+<br/>
+<kbd>working screenshot</kbd>
+<br/>
+![](images/remod4.png)
+<br/>
 
 
 
