@@ -37,33 +37,29 @@
     + multiple choice, true/false type of questions
 
 
-- Entire project broken down with partials, since I'm going to be loading json
-  data asynchonous anyways, so:
-    + header partial,
-    + maincontent partial and a
+- two partials, two json files
+  data asynchonous
+    + maincontent partial
     + footer partial
+    + questions data
+    + inner html data (why not)
 
 
 - modular pattern:  
 
     + 2 globals => one under mainApp and another under a Utilities module
 
-    + 2 modules   
+    + 5 modules - self-exec fns, public and private methods and funs  
 
         - mainApp => mainContent (questions/answers)
 
-        - utilities => will load header and footer
+        - utilities => will load main content and footer
 
-                + load header and footer
-
-                + maybe one more => general purpose/helper under utilities too, if
-                  necessary.
-
-   
+             + dom, gen, string, page, and main util
+             + sub-modules, call everything from main util
 
 
-- images/css - kepping it simple so no css framework - just the basics.
-
+- images/css - minimum
 
 <br/>
 
